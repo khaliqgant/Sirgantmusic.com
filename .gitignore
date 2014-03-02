@@ -1,2 +1,10 @@
 
 log/*
+
+config/deploy.yml
+
+sirgantapp/config/mongoid.yml
+
+sirgantapp/config/initializers/secret_token.rb
+
+sirgantapp/config/initializers/carrierwave.rb
