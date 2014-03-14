@@ -10,3 +10,7 @@ sirgantapp/config/initializers/secret_token.rb
 sirgantapp/config/initializers/carrierwave.rb
 
 .bundle/install.log
+
+.push-tmp/*
+
+.sass-cache/*
