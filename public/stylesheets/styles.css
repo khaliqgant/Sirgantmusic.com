@@ -1,0 +1,48 @@
+.head{
+    font-size:36px;
+    margin:0;
+    font-weight:500;
+}
+.subhead{
+    font-size:28px;
+    font-weight:500;
+    padding-left:20px;
+    padding-top:8px;
+}
+.icon-bar{
+    display:block;
+    background-color:#0d78d9;
+    width:40px;
+    height:4.5px;
+    border-radius:4px;
+    clear:left;
+}
+.large{
+    width:100%;
+}
+.nav-bars{
+    padding-top:5px;
+}
+.icon-bar + .icon-bar{
+    margin-top:4px;
+}
+.page-title{
+    float:left;
+    padding-left:20px;
+}
+.center-align{
+    text-align:center;
+    float:left;
+    padding-top:10px;
+}
+a{
+    color:black;
+}
+.nav-pills > .active > a{
+    color:#0088cc;
+    background-color:white;
+}
+.nav-pills > li > a{
+    text-transform:uppercase;
+    font-size:13px;
+}

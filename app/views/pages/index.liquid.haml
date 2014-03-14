@@ -21,6 +21,7 @@ published: true
 
     / Le styles
     {{ 'bootstrap.css' | stylesheet_tag }}
+    {{ 'styles.css' | stylesheet_tag }}
     {{ 'bootstrap-responsive.css' | stylesheet_tag }}
     {{ 'application.css' | stylesheet_tag }}
 
@@ -40,19 +41,22 @@ published: true
             %a{:href => "/about"} About
           %li
             %a{:href => "/contact"} Contact
-        %h3.muted {{ site.name }}
-
-      %hr
+        %a.pull-left.nav-bars{:href=>"#"}
+          .icon-bar.pull-left
+          .icon-bar.pull-left
+          .icon-bar.pull-left
+        .page-title
+          .head SirGant
+          .subhead &amp; The Invisible Force
 
       {% block 'main' %}
-      .jumbotron
+      .center-align
+        <img class="large" src="{{ 'sirgant.jpg' | theme_image_url }}" alt="sirgant">
         %h1 Super awesome marketing speak!
         %p.lead Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
         %a.btn.icon-flag.btn-large.btn-success{:href => "#"} Sign up today
 
-      %hr
-
-      .row-fluid.marketing
+      .row-fluid
         .span6
           %h4 Subheading
           %p Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.

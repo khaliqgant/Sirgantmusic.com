@@ -23,6 +23,7 @@
 /*  Font Awesome styles
     ------------------------------------------------------- */
 /* includes sprites.less reset */
+
 [class^="icon-"],
 [class*=" icon-"] {
   font-family: FontAwesome;
