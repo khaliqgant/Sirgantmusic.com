@@ -8,5 +8,7 @@ A rails locomotive app showcasing Sirgant.
 * ```` bundle exec unicorn_rails```` to start the backend rails app
 * Site can be viewed at http://localhost:8080/
 
+* If you don't have imagemagick, you should install it (on mac) by ````brew install imagemagick````
+
 ## Developing
 * To get started, best bet is to follow this [tutorial](http://doc.locomotivecms.com/get-started/create-your-first-site)
