@@ -51,26 +51,29 @@ published: true
 
       {% block 'main' %}
       .center-align
-        <img class="large" src="{{ 'sirgant.jpg' | theme_image_url }}" alt="sirgant">
+        {% capture photo %}{% editable_file "photo" %}/samples/pages/sirgant.jpg{% endeditable_file %}
+        {% endcapture %}
+        <img class="large" src="{{ photo }}" alt="sirgant">
+        {% editable_text "top_text", rows: 20 %}
         %h1 Super awesome marketing speak!
-        %p.lead Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-        %a.btn.icon-flag.btn-large.btn-success{:href => "#"} Sign up today
+        {% endeditable_text %}
 
       .row-fluid
-        .span6
+        .span4
           %h4 Subheading
           %p Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
           %h4 Subheading
           %p Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
           %h4 Subheading
           %p Maecenas sed diam eget risus varius blandit sit amet non magna.
-        .span6
-          %h4 Subheading
-          %p Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
-          %h4 Subheading
-          %p Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
-          %h4 Subheading
-          %p Maecenas sed diam eget risus varius blandit sit amet non magna.
+        .span4
+          {% capture cd_photo %}{% editable_file "cd_photo" %}/samples/pages/journey_cd.jpg{% endeditable_file %}
+          {% endcapture %}
+          <img class="large" src="{{ cd_photo }}" alt="cd">
+          <a href="{% editable_text "itunes_link", rows: 2, hint: "Include link only. Link should include full path with http://" %}https://itunes.apple.com/us/album/the-journey/id422111037{% endeditable_text %}" target="_blank"><img src="{{ 'itunes.png' || theme_image_url || resize: '50x' }}" alt="iTunes link"></a>
+          %h4 Purchase Now!
+        .span4
+          %h4 Twitter info
       {% endblock %}
       %hr
 
