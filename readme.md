@@ -14,4 +14,4 @@ A rails locomotive app showcasing Sirgant.
 * To get started, best bet is to follow this [tutorial](http://doc.locomotivecms.com/get-started/create-your-first-site)
 
 ## Deployment
-* http://doc.locomotivecms.com/get-started/deployment
+* [Locomotive](http://doc.locomotivecms.com/get-started/deployment)
