@@ -1,0 +1,4 @@
+alias fe='bundle exec wagon serve'
+alias db='mongod'
+alias init='(cd sirgantapp && bundle exec rails g locomotive:install && bundle exec unicorn_rails)'
+alias compile='bundle exec wagon push development'
