@@ -1,0 +1,70 @@
+---
+title: Sub page
+published: true
+---
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}
+
+    %title {{ page.title }}
+
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+    %meta{:content => "{{ site.meta_description }}", :name => "description"}
+    %meta{:content => "{{ site.meta_keywords }}", :name => "keywords"}
+
+    / Fonts
+    {{ 'fonts/awesome.css' | stylesheet_tag }}
+    {{ 'fonts/font-awesome.css' | stylesheet_tag }}
+    /[if IE 7]
+      {{ 'fonts/font-awesome-ie7.min.css' | stylesheet_tag }}
+
+    / Le styles
+    {{ 'bootstrap.css' | stylesheet_tag }}
+    {{ 'styles.css' | stylesheet_tag }}
+    {{ 'bootstrap-responsive.css' | stylesheet_tag }}
+    {{ 'application.css' | stylesheet_tag }}
+
+    / HTML5 shim, for IE6-8 support of HTML5 elements
+    /[if lt IE 9]
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+
+    {% inline_editor %}
+  %body
+
+    .container-narrow
+      .masthead
+        %ul.nav.nav-pills.pull-right
+          %li.active
+            %a{:href => "/"} Home
+          %li
+            %a{:href => "/about"} About
+          %li
+            %a{:href => "/contact"} Contact
+        %a.pull-left.nav-bars{:href=>"#"}
+          .icon-bar.pull-left
+          .icon-bar.pull-left
+          .icon-bar.pull-left
+        .page-title
+          .head SirGant
+          .subhead &amp; The Invisible Force
+
+      {% block 'main' %}
+      .center-align
+        {% capture photo %}{% editable_file "photo" %}/samples/pages/sirgant.jpg{% endeditable_file %}
+        {% endcapture %}
+        <img class="large" src="{{ photo }}" alt="sirgant">
+        {% editable_text "top_text", rows: 20 %}
+        %h1 Super awesome marketing speak!
+        {% endeditable_text %}
+      {% endblock %}
+      %hr
+
+      {% include footer %}
+    / /container
+    /
+      Le javascript
+      \==================================================
+    / Placed at the end of the document so the pages load faster
+    %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"}
+    {{ 'bootstrap.js' | javascript_tag }}
